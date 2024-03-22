@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMM - Célok</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cel.css">
+    <link rel="icon" href="../img/icon.png">
+
+    <script>
+        function Lenyit(szam) {
+            const lista = document.querySelectorAll(".reszletek");
+            if(lista[szam].style.display == "block"){
+                lista[szam].style.display = "none";
+            }else{
+                lista[szam].style.display = "block";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div class="tartalom">
+        <header>
+
+        </header>
+        <nav>
+            <a href="fooldal.html"><span>Főoldal</span><img class="jelek" src="../img/homeicon.png"></a>
+            <a href="tranzakcio.html"><span>Új tranzakció</span><img class="jelek" src="../img/plusicon.png"></a>
+            <a href="statisztika.html"><span>Statisztikák</span><img class="jelek" src="../img/staticon2.png"></a>
+            <a href="celok.html"><span>Céljaim</span><img class="jelek" src="../img/goalicon.png"></a>
+            <a href="profil.html"><img class="usericon" src="../img/userico.png" alt=""></a>
+        </nav>
+        <div id="teszt"></div>
+        <div id="penzmozgas">
+            <h1>PÉNZ MOZGATÁSA</h1>
+            <form method="post">
+                <input type="radio" name="irany" checked id="felretesz">
+                <label for="felretesz">Félreteszek</label>
+                <input type="radio" name="irany" id="kivesz">
+                <label for="felretesz">Kiveszek</label><br>
+                <input type="number" placeholder="Összeg" name="ossszeg" id="osszegInput"> <span id="cimke">Ft</span>
+                <br>
+                <label id="perselylabel" for="perselySelect">Érintett malacpersely:</label><br>
+                <select name="lista" id="perselySelect">
+                    <option disabled selected>Válasszon!</option>
+                    <option value="0">Új autó</option>
+                    <option value="1">WDYM társasjáték</option>
+                    <option value="0">Új autó</option>
+                </select>
+                <br>
+                <input id="kuldes" type="submit" value="Tranzakció indítása">
+            </form>
+        </div>
+        <div onclick="Lenyit(0)" class="cel">
+            <div class="megnevezes">Új autó <div class="datum">2025.01.01</div></div>
+            <table class="penzek">
+                <tr>
+                    <td>Célösszeg:</td><td>1.000.000 Ft</td>
+                </tr>
+                <tr>
+                    <td>Félretett összeg:</td><td>600.000 Ft</td>
+                </tr>
+            </table>
+            <div class="elorehaladas">
+                60%
+            </div>
+            
+            <div class="reszletek">
+                <img src="../img/delete.png" class="gombok">
+                <div class="info">
+                    <p>Létrehozva: <span class="adat">2024.03.22</span> </p>
+                    <p>Rendszeresség: <span class="adat">Havi</span> </p>
+                    <p>Szükséges összeg a cél eléréséhez: <span class="adat">10.000 Ft</span>  / Hó</p>
+                    <p>Teljesíések az előző időszakokban:</p>
+                </div>
+                
+                <div class="teljesitesek">
+                    <img src="../img/tick.png" class="teljesites" alt="">
+                    <img src="../img/tick.png" class="teljesites" alt="">
+                    <img src="../img/x.png" class="teljesites" alt="">
+                    <img src="../img/tick.png" class="teljesites" alt="">
+                </div>
+
+            </div>
+        </div>
+        <div onclick="Lenyit(1)" class="cel">
+            <div class="megnevezes">WDYM társasjáték <div class="datum">2024.10.31</div></div>
+            <table class="penzek">
+                <tr>
+                    <td>Célösszeg:</td><td>10.000 Ft</td>
+                </tr>
+                <tr>
+                    <td>Félretett összeg:</td><td>1500 Ft</td>
+                </tr>
+            </table>
+            <div class="elorehaladas">
+                15%
+            </div>
+            <div class="reszletek">
+                <img src="../img/delete.png" class="gombok">
+                <div class="info">
+                    <p>Létrehozva: <span class="adat">2024.03.22</span> </p>
+                    <p>Rendszeresség: <span class="adat">Heti</span> </p>
+                    <p>Szükséges összeg a cél eléréséhez: <span class="adat">1.000 Ft</span>  / Hét</p>
+                    <p>Teljesíések az előző időszakokban:</p>
+                </div>
+                
+                <div class="teljesitesek">
+                    <img src="../img/x.png" class="teljesites" alt="">
+                    <img src="../img/tick.png" class="teljesites" alt="">
+                </div>
+
+            </div>
+        </div>
+        <div onclick="Lenyit(2)" class="cel">
+            <div class="megnevezes">Ház <div class="datum">2030.01.01</div></div>
+            <table class="penzek">
+                <tr>
+                    <td>Célösszeg:</td><td>10.000.000 Ft</td>
+                </tr>
+                <tr>
+                    <td>Félretett összeg:</td><td>1.000.000 Ft</td>
+                </tr>
+            </table>
+            <div class="elorehaladas">
+                10%
+            </div>
+            <div class="reszletek">
+                <img src="../img/delete.png" class="gombok">
+                <div class="info">
+                    <p>Létrehozva: <span class="adat">2023.12.22</span> </p>
+                    <p>Rendszeresség: <span class="adat">Havi</span> </p>
+                    <p>Szükséges összeg a cél eléréséhez: <span class="adat">15.000 Ft</span>  / Hó</p>
+                    <p>Teljesíések az előző időszakokban:</p>
+                </div>
+                
+                <div class="teljesitesek">
+                    <img src="../img/tick.png" class="teljesites" alt="">
+                    <img src="../img/tick.png" class="teljesites" alt="">
+                    <img src="../img/tick.png" class="teljesites" alt="">
+                    <img src="../img/tick.png" class="teljesites" alt="">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
